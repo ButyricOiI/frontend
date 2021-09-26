@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <title>Ширина, выравнивание, float</title>
+  </head>
+
+  <!-- по умолчанию body блочный элемент, занимает 100% ширины родительского элемента html и имеет небольшой отступ margin по краям -->
+  <body style="margin: 80px;;">
+
+    <!-- этот блок будет тянуться по ширине окна -->
+    <div style="width:100%; background-color:rgb(126, 125, 125); padding: 10px; height:120px;">
+      <!-- картинка обтекает текст слева -->
+      <img style="float:left; margin:10px; width:100px; height:100px;" src="https://pics.freeicons.io/uploads/icons/png/6865233411620478923-64.png" alt="Описание картинки для скрин-ридеров и поисковиков" />
+      <!-- этот блок, как положено блочному элементу по умолчанию, займет всю оставшуюся ширину родительского элемента -->
+      <div style="background-color:rgb(136, 136, 136); padding:20px;">Cписок  разновидностей  ссылок  в html</div>
+    </div>
+
+    <!-- этот блок будет ограничен по ширине и горизонтально выровнен по центру родительского элемента -->
+    <div style="max-width:800px; background-color:rgb(133, 133, 133); margin: 0 auto; margin-top:40px; padding:30px;">
+<ol   type="I"> 
+<p> <li>  1) абсолютную гиперссылку на главную страницу сайта example.com;</p></li>
+<a target="_blank" href="http://example.com/">example.com;</a>
+<p><li> абсолютную на главную сайта example.com в протоколе https:</li>
+<a target="_blank" href="https://example.com/">example.com;</a></p>
+<p><li> ссылку на файл на сервере FTP без авторизации:</li>
+<a target="_blank" href="ftp://example.com/myfile.zip">f.txt</a></p>
+<p><li> ссылку на файл на сервере FTP с авторизацией:</li>
+<a target="_blank" href="ftp://user:password@example.com/f.txt">f.txt</a></p>
+<p><li> ссылку на фрагмент страницы некоторого сайта:</li>
+<a target="_blank" href="https://ru.wiktionary.org/wiki/%D0%BE%D0%B1%D0%B8%D0%B4%D0%BD%D1%8B%D0%B9#:~:text=%D1%81%D0%BE%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%89%D0%B8%D0%B9%20%D0%B2%20%D1%81%D0%B5%D0%B1%D0%B5%20%D0%BE%D0%B1%D0%B8%D0%B4%D1%83%2C%20%D0%BF%D1%80%D0%B8%D1%87%D0%B8%D0%BD%D1%8F%D1%8E%D1%89%D0%B8%D0%B9%20%D0%BE%D0%B1%D0%B8%D0%B4%D1%83%3B%20%D0%BE%D1%81%D0%BA%D0%BE%D1%80%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9%20%E2%97%86%C2%A0%D0%9E%D1%82%D1%81%D1%83%D1%82%D1%81%D1%82%D0%B2%D1%83%D0%B5%D1%82%20%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%20%D1%83%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F%20(%D1%81%D0%BC.%20%D1%80%D0%B5%D0%BA%D0%BE%D0%BC%D0%B5%D0%BD%D0%B4%D0%B0%D1%86%D0%B8%D0%B8).">нелицеприятный</a></p></li>
+<p><li> ссылку на фрагмент текущей страницы:</li>
+<a href="#top">Наверх</a></p>
+<p><li> ссылку с двумя параметрами в url:</li>
+<a target="_blank" href=" http://seophp.example.com/Products/Pn.html">rules</a></p>
+<p><li> Список ссылок основной навигации сайта с подписями title:</p></li>
+<ul>
+<li><a target="_blank" href="https://krd.ru/" title="Главная страница">Главная</a></li>
+<li><a target="_blank" href="https://krd.ru/podrazdeleniya/administratsii-krasnodara/otdel-voprosam-zdorovya-grajdan/vaktsinatsiya-ot-covid-19" title="Страница приемной комиссии">вакцинации  от ковид</a></li>
+<li><a target="_blank" href="https://krd.ru/dokumenty/" title="Страница со списком факультетов">документы</a></li>
+</ul>
+<p><li> Сслыка без href: <a>" https://vk.com/feed"</a></p></li>
+<p><li> Сслыка с пустым href: <a href="  ">Ссылка</a></p></li>
+<p><li> ссылку, по которой запрещен переход поисковикам;</li>
+    <a href="http://example.ru" rel="nofollow">ссылка</a>
+<p><li>запрещенную для индексации поисковиками<a href="http://example.com" rel="nofollow"><noindex>ссыка</noindex></a></p></li>
+<p><li> контекстную  <a target="_blank" href="https://example.com/">ссылку</a> в тексте абзаца</p></li>
+<p><li> ссылку-изображение<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"><img src="https://media.istockphoto.com/photos/male-chimpanzee-in-business-clothes-picture-id184941527" width="110" height="110" alt="Пример"></a></p>  </li>
+<p> <li> ссылки из прямоугольных и круглых областей картинки (HTML-тег map);</li>
+    <p><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHuZylKrfQPBpTKFzarz9OBsOR4FA0Yg3Rcw&usqp=CAU" width="411" height="46" usemap="#map" alt="Навигация"></p>
+  <p><map name="map"> <area shape="poly" alt="Закладка 2" 
+    coords="210,27, 203,9, 202,6, 197,2, 192,1, 120,1, 115,2, 110,6, 112,9, 119,27, 119,32, 211,32, 210,27" 
+    href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+    <area shape="poly" alt="Закладка 3" 
+    coords="302,27, 295,9, 293,6, 289,2, 283,1, 212,1, 206,2, 202,6, 203,9, 210,27, 211,32, 284,32, 303,32, 302,27" href="example.com">
+    <area shape="poly" alt="Закладка 4" 
+    coords="302,27, 303,32, 394,32, 393,27, 386,9, 382,3, 375,1, 303,1, 298,2, 293,6, 295,9, 302,27" 
+    href="https://www.youtube.com/user/pewdiepie">
+  </map></p>
+</p>
+<p><li> относительную на страницу в текущем каталоге;   <a href="16.html">ТАБЛИЦА ЗАДАНИЯ 2</a> </p></li>
+<p><li> относительную на страницу в каталоге about  <a href="about/aboutwhat.html">sus</a>  </p></li>
+<p><li> относительную на страницу в каталоге уровнем выше текущего;<a href="../nimbus.html">nimbus</a></p></li>
+<p><li> относительную на страницу в каталоге двумя уровнями выше;<a href="/budzdorov.html">ahtung!</a></p></li>
+<p><li> сокращенную на главную;</p><a href="..//WEBS/district.html">aloha</a></li>
+<p><li> сокращенную ссылку на внутреннюю.</p></li>
+</ol></span>
+</div>
+
+</body>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Таблица размеров обуви</title>
+ </head>
+ <body>
+  <table border="1">
+   <caption>Таблица размеров обуви</caption>
+   <tr>
+    <th>Россия</th>
+    <th>Великобритания</th>
+    <th>Европа</th>
+    <th>Длина ступни, см</th>
+   </tr>
+   <tr><td>34,5</td><td>3,5</td><td>36</td><td>23</td></tr>
+   <tr><td>35,5</td><td>4</td><td>36⅔</td><td>23–23,5</td></tr>
+   <tr><td>36</td><td>4,5</td><td>37⅓</td><td>23,5</td></tr>
+   <tr><td>36,5</td><td>5</td><td>38</td><td>24</td></tr>
+   <tr><td>37</td><td>5,5</td><td>38⅔</td><td>24,5</td></tr>
+   <tr><td>38</td><td>6</td><td>39⅓</td><td>25</td></tr>
+   <tr><td>38,5</td><td>6,5</td><td>40</td><td>25,5</td></tr>
+   <tr><td>39</td><td>7</td><td>40⅔</td><td>25,5–26</td></tr>
+   <tr><td>40</td><td>7,5</td><td>41⅓</td><td>26</td></tr>
+   <tr><td>40,5</td><td>8</td><td>42</td><td>26,5</td></tr>
+   <tr><td>41</td><td>8,5</td><td>42⅔</td><td>27</td></tr>
+   <tr><td>42</td><td>9</td><td>43⅓</td><td>27,5</td></tr>
+   <tr><td>43</td><td>9,5</td><td>44</td><td>28</td></tr>
+   <tr><td>43,5</td><td>10</td><td>44⅔</td><td>28–28,5</td></tr>
+   <tr><td>44</td><td>10,5</td><td>45⅓</td><td>28,5–29</td></tr>
+   <tr><td>44,5</td><td>11</td><td>46</td><td>29</td></tr>
+   <tr><td>45</td><td>11,5</td><td>46⅔</td><td>29,5</td></tr>
+   <tr><td>46</td><td>12</td><td>47⅓</td><td>30</td></tr>
+   <tr><td>46,5</td><td>12,5</td><td>48</td><td>30,5</td></tr>
+   <tr><td>47</td><td>13</td><td>48⅔</td><td>31</td></tr>
+   <tr><td>48</td><td>13,5</td><td>49⅓</td><td>31,5</td></tr>
+  </table>
+ </body>
+</html>
+<head>
+  <meta charset="utf-8">
+  <title>footer</title>
+ </head> 
+ <body>
+  <header>
+    <h1>Персональный сайт Графа Дуку</h1>
+  </header>
+  <article>
+    <h2>Добро пожаловать!</h2>
+    <p>Рада приветствовать вас на своем сайте.</p>
+  </article>
+  <footer>
+    Copyright Великий мастер ситхов
+  </footer>
+ </body> 
+</html> 
