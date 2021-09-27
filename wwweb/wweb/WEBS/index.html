@@ -76,6 +76,23 @@
   <meta charset="utf-8">
   <title>Таблица размеров обуви</title>
  </head>
+ <head>
+  <meta charset="utf-8">
+  <title>nth-child</title>
+  <style>
+   table { 
+    width: 100%; /* Ширина таблицы */
+    border-spacing: 0; /* Расстояние между ячейками */
+   }
+   tr:nth-child(2n) {
+    background: #f0f0f0; /* Цвет фона */
+   } 
+   tr:nth-child(1) {
+    background: #666; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+   } 
+  </style>
+ </head>
  <body>
   <table border="1">
    <caption>Таблица размеров обуви</caption>
