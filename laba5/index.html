@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+        input {
+            height: 30px;
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="col mx-3 my-3">
+            <form class="form-inline">
+                <input class="form-control mr-sm-3 mb mb-3" type="number" placeholder="Стоимость товара" id="worth">
+                <input class="form-control mr-sm-3 mb mb-3" type="number" placeholder="Количество товара" id="count">
+                <button class="btn btn-primary mb mb-3" type="button" id="calculate">Посчитать</button>
+            </form>
+            <div class="result">Итоговая стоимость: <p class="d-inline"></p></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            calculate.onclick = function() {
+            let worth = document.querySelector('#worth').value.match(/^\d+$/);
+            let count = document.querySelector('#count').value.match(/^\d+$/);
+            let result;
+            if (worth === null || Number(count) === null) {
+                document.querySelector('p').innerHTML='<span style="color: red;">Введи коррекнтые данные</span>';
+            } else {
+                result = Number(worth) * Number(count);
+                document.querySelector('p').innerHTML=result;
+            }
+        }
+        });
+    </script>
+</body>
+</html>
