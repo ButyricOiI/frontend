@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>lab#8</title>
+
+    <style>
+        .popup_container{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    display: none;
+}
+
+.popup_content{
+    position: absolute;
+    max-width: 330px;
+    max-height: 120px;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.popup_content form{
+    display: flex;
+}
+.no-scroll {
+    overflow-y: hidden;
+}
+
+
+#hide{
+    position: relative;
+    left: 195px;
+}
+
+#onSubmit{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.privacy_policy{
+    display: flex;
+}
+.text_priv_pol{
+    color: darkturquoise;
+}
+#close_bt{
+    max-width: 15px;
+}
+
+
+    </style>
+</head>
+
+
+
+<body>
+    <div class="main_page">
+        <button id="show">popup</button>
+    </div>
+
+    <div class="popup_container">
+        <form class="ajaxForm" action="https://formcarry.com/s/uQdIE5W1Qrx" accept-charset="UTF-8" target="frame">
+            <div class="popup_content">
+                <div>
+                    <input type="text" placeholder="Имя" name="firstname" id="name" value="" required>
+                </div>
+                <div>
+                    <input type="email" placeholder="почта" name="email" id="email" value="" required>
+                </div>
+
+                <div class="privacy_policy">
+                    <input type="checkbox" id="scales" >
+                    <span style="color: white">политика конфидециальности</span>
+                </div>
+
+                <button id="onSubmit" type="submit">отправить</button>
+            </div>
+        </form>
+    </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
